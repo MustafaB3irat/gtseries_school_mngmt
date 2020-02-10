@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'models/AbsentAndLate.dart';
 import 'StudentAbsentAndLateCard.dart';
 
-class StudentAbsent extends StatelessWidget {
+class StudentLateProfile extends StatelessWidget {
   final List<AbsentAndLate> data = [
     AbsentAndLate(
         date: '20/9/2019', excuse: 'مرض', details: 'لا شيء', notes: 'لا شيء'),
@@ -22,7 +22,7 @@ class StudentAbsent extends StatelessWidget {
         backgroundColor: Colors.grey[850],
         centerTitle: true,
         title: Text(
-          'الغيابات',
+          'التأخيرات',
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 22.0,
@@ -42,7 +42,7 @@ class StudentAbsent extends StatelessWidget {
             padding: EdgeInsets.all(10),
             child: Column(
               children:
-                  data.map((absent) => StudentAbsentAndLateCard(absent)).toList(),
+              data.map((absent) => StudentAbsentAndLateCard(absent)).toList(),
             ),
           ),
         ),

@@ -3,6 +3,9 @@ import './dashboard.dart';
 import './StudentIdCard.dart';
 import './StudentProfile.dart';
 import './StudentAbsent.dart';
+import './StudentLateProfile.dart';
+import './BehaviourProfile.dart';
+import './HealthProfile.dart';
 
 void main() => runApp(MyApp());
 
@@ -45,6 +48,9 @@ class MyAppState extends State<MyApp> {
         '/studentProfile': (context) => StudentProfile(),
         '/studentIdCard': (context) => StudentIdCard(),
         '/studentAbsent': (context) => StudentAbsent(),
+        '/studentLateProfile': (context) => StudentLateProfile(),
+        '/studentBehaviourProfile': (context) => BehaviourProfile(),
+        '/studentHealthProfile': (context) => HealthProfile(),
       },
     );
   }

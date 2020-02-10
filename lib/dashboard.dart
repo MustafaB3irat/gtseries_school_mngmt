@@ -110,7 +110,7 @@ class _DashboardState extends State<dashboard> {
         verticalDashItem(Icons.map, "الخطة الإرشادية", 0xff607D8B),
         verticalDashItem(Icons.work, "الوظائف", 0xff8BC34A),
         horizontalDashItem(Icons.library_books, "المواد التعليمية", 0xff9E9E9E),
-        verticalDashItem(Icons.date_range, "مواعيد زياة الأهل", 0xffEC5862),
+        verticalDashItem(Icons.date_range, "مواعيد زيارة الأهل", 0xffEC5862),
         verticalDashItem(Icons.attach_money, "الأقساط", 0xffEE5135),
         horizontalDashItem(Icons.message, "الرسائل", 0xff72b2a7),
       ],

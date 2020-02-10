@@ -5,9 +5,16 @@ class StudentIdCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
       appBar: AppBar(
-        title: Text('GT Series'),
+        title: Text(
+          'البطاقة الشخصية',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 22.0,
+            color: Colors.white,
+            fontFamily: 'Lemonada',
+          ),
+        ),
         centerTitle: true,
         backgroundColor: Colors.grey[850],
         elevation: 0.0,
@@ -485,15 +492,17 @@ class StudentIdCard extends StatelessWidget {
                 padding: EdgeInsets.all(15),
                 color: Colors.amberAccent,
                 child: Center(
-                  child: Text(
-                    'طالب تمت اضافته في الأونة الأخيرة بناء على قرار 142',
-                    style: TextStyle(
-                      fontFamily: 'Lemonade',
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16,
-                      color: Colors.grey[850],
-                    ),
-                  ),
+                  child: new Directionality(
+                      textDirection: TextDirection.rtl,
+                      child: Text(
+                        'طالب تمت اضافته في الأونة الأخيرة بناء على قرار 142',
+                        style: TextStyle(
+                          fontFamily: 'Lemonade',
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16,
+                          color: Colors.grey[850],
+                        ),
+                      )),
                 ),
               ),
             ],

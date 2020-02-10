@@ -1,0 +1,133 @@
+import 'package:flutter/material.dart';
+import 'models/AbsentAndLate.dart';
+
+class StudentAbsentAndLateCard extends StatelessWidget {
+  final AbsentAndLate absent;
+
+  StudentAbsentAndLateCard(this.absent);
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      elevation: 10.0,
+      color: Colors.grey[850],
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: <Widget>[
+          new Directionality(
+              textDirection: TextDirection.rtl,
+              child: new ListTile(
+                contentPadding:
+                    EdgeInsets.symmetric(vertical: 10.0, horizontal: 15),
+                title: Text(
+                  absent.date,
+                  style: TextStyle(
+                      fontSize: 22,
+                      color: Colors.amberAccent,
+                      fontWeight: FontWeight.bold),
+                ),
+                subtitle: Text(
+                  'التاريخ',
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Colors.white,
+                  ),
+                ),
+                leading: Icon(
+                  Icons.date_range,
+                  size: 35,
+                  color: Colors.white,
+                ),
+              )),
+          Divider(
+            height: 10,
+            color: Colors.grey[900],
+          ),
+          new Directionality(
+              textDirection: TextDirection.rtl,
+              child: new ListTile(
+                contentPadding:
+                    EdgeInsets.symmetric(vertical: 10.0, horizontal: 15),
+                subtitle: Text(
+                  'البيان',
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Colors.white,
+                  ),
+                ),
+                title: Text(
+                  absent.details,
+                  style: TextStyle(
+                      fontSize: 22,
+                      color: Colors.amberAccent,
+                      fontWeight: FontWeight.bold),
+                ),
+                leading: Icon(
+                  Icons.details,
+                  size: 35,
+                  color: Colors.white,
+                ),
+              )),
+          Divider(
+            height: 10,
+            color: Colors.grey[900],
+          ),
+          new Directionality(
+              textDirection: TextDirection.rtl,
+              child: new ListTile(
+                contentPadding:
+                    EdgeInsets.symmetric(vertical: 10.0, horizontal: 15),
+                subtitle: Text(
+                  'بعذر؟',
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Colors.white,
+                  ),
+                ),
+                title: Text(
+                  absent.excuse,
+                  style: TextStyle(
+                      fontSize: 22,
+                      color: Colors.amberAccent,
+                      fontWeight: FontWeight.bold),
+                ),
+                leading: Icon(
+                  Icons.live_help,
+                  size: 35,
+                  color: Colors.white,
+                ),
+              )),
+          Divider(
+            height: 10,
+            color: Colors.grey[900],
+          ),
+          new Directionality(
+              textDirection: TextDirection.rtl,
+              child: new ListTile(
+                contentPadding:
+                    EdgeInsets.symmetric(vertical: 10.0, horizontal: 15),
+                title: Text(
+                  absent.notes,
+                  style: TextStyle(
+                      fontSize: 22,
+                      color: Colors.amberAccent,
+                      fontWeight: FontWeight.bold),
+                ),
+                subtitle: Text(
+                  'الملاحظات',
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Colors.white,
+                  ),
+                ),
+                leading: Icon(
+                  Icons.note,
+                  color: Colors.white,
+                  size: 35,
+                ),
+              )),
+        ],
+      ),
+    );
+  }
+}

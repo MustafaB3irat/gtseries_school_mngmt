@@ -11,7 +11,15 @@ class _StudentProfileState extends State<StudentProfile> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('GT Series'),
+        title: Text(
+          'ملف الطالب',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 22.0,
+            color: Colors.white,
+            fontFamily: 'Lemonada',
+          ),
+        ),
         centerTitle: true,
         backgroundColor: Colors.grey[850],
         elevation: 0.0,
@@ -26,25 +34,27 @@ class _StudentProfileState extends State<StudentProfile> {
                 Expanded(
                     child: Container(
                   height: 100,
-                  child: RaisedButton.icon(
-                    onPressed: () {
-                      Navigator.pushNamed(context, '/studentIdCard');
-                    },
-                    color: Color(0xff8782FF),
-                    textColor: Colors.white,
-                    icon: Icon(
-                      Icons.perm_identity,
-                      size: 30,
-                      color: Colors.white,
-                    ),
-                    label: Text(
-                      'البطاقة الشخصية',
-                      style: TextStyle(
-                          fontSize: 22,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: 'Lemonada'),
-                    ),
-                  ),
+                  child: new Directionality(
+                      textDirection: TextDirection.rtl,
+                      child: RaisedButton.icon(
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/studentIdCard');
+                        },
+                        color: Color(0xff8782FF),
+                        textColor: Colors.white,
+                        icon: Icon(
+                          Icons.perm_identity,
+                          size: 30,
+                          color: Colors.white,
+                        ),
+                        label: Text(
+                          'البطاقة الشخصية',
+                          style: TextStyle(
+                              fontSize: 22,
+                              fontWeight: FontWeight.bold,
+                              fontFamily: 'Lemonada'),
+                        ),
+                      )),
                 )),
               ],
             ),
@@ -53,23 +63,27 @@ class _StudentProfileState extends State<StudentProfile> {
                 Expanded(
                     child: Container(
                   height: 100,
-                  child: RaisedButton.icon(
-                    onPressed: () {Navigator.pushNamed(context, '/studentAbsent');},
-                    color: Color(0xffF06A3F),
-                    textColor: Colors.white,
-                    icon: Icon(
-                      MdiIcons.close,
-                      size: 30,
-                      color: Colors.white,
-                    ),
-                    label: Text(
-                      'الغيابات',
-                      style: TextStyle(
-                          fontSize: 22,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: 'Lemonada'),
-                    ),
-                  ),
+                  child: new Directionality(
+                      textDirection: TextDirection.rtl,
+                      child: RaisedButton.icon(
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/studentAbsent');
+                        },
+                        color: Color(0xffF06A3F),
+                        textColor: Colors.white,
+                        icon: Icon(
+                          MdiIcons.close,
+                          size: 30,
+                          color: Colors.white,
+                        ),
+                        label: Text(
+                          'الغيابات',
+                          style: TextStyle(
+                              fontSize: 22,
+                              fontWeight: FontWeight.bold,
+                              fontFamily: 'Lemonada'),
+                        ),
+                      )),
                 )),
               ],
             ),
@@ -78,23 +92,27 @@ class _StudentProfileState extends State<StudentProfile> {
                 Expanded(
                     child: Container(
                   height: 100,
-                  child: RaisedButton.icon(
-                    onPressed: () {},
-                    color: Color(0xffFDC106),
-                    textColor: Colors.white,
-                    icon: Icon(
-                      MdiIcons.clockOut,
-                      size: 30,
-                      color: Colors.white,
-                    ),
-                    label: Text(
-                      'التأخيرات',
-                      style: TextStyle(
-                          fontSize: 22,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: 'Lemonada'),
-                    ),
-                  ),
+                  child: new Directionality(
+                      textDirection: TextDirection.rtl,
+                      child: RaisedButton.icon(
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/studentLateProfile');
+                        },
+                        color: Color(0xffFDC106),
+                        textColor: Colors.white,
+                        icon: Icon(
+                          MdiIcons.clockOut,
+                          size: 30,
+                          color: Colors.white,
+                        ),
+                        label: Text(
+                          'التأخيرات',
+                          style: TextStyle(
+                              fontSize: 22,
+                              fontWeight: FontWeight.bold,
+                              fontFamily: 'Lemonada'),
+                        ),
+                      )),
                 )),
               ],
             ),
@@ -103,23 +121,28 @@ class _StudentProfileState extends State<StudentProfile> {
                 Expanded(
                     child: Container(
                   height: 100,
-                  child: RaisedButton.icon(
-                    onPressed: () {},
-                    color: Color(0xff8BC34A),
-                    textColor: Colors.white,
-                    icon: Icon(
-                      MdiIcons.policeBadge,
-                      size: 30,
-                      color: Colors.white,
-                    ),
-                    label: Text(
-                      'الملف السلوكي',
-                      style: TextStyle(
-                          fontSize: 22,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: 'Lemonada'),
-                    ),
-                  ),
+                  child: new Directionality(
+                      textDirection: TextDirection.rtl,
+                      child: RaisedButton.icon(
+                        onPressed: () {
+                          Navigator.pushNamed(
+                              context, '/studentBehaviourProfile');
+                        },
+                        color: Color(0xff8BC34A),
+                        textColor: Colors.white,
+                        icon: Icon(
+                          MdiIcons.policeBadge,
+                          size: 30,
+                          color: Colors.white,
+                        ),
+                        label: Text(
+                          'الملف السلوكي',
+                          style: TextStyle(
+                              fontSize: 22,
+                              fontWeight: FontWeight.bold,
+                              fontFamily: 'Lemonada'),
+                        ),
+                      )),
                 )),
               ],
             ),
@@ -128,23 +151,27 @@ class _StudentProfileState extends State<StudentProfile> {
                 Expanded(
                     child: Container(
                   height: 100,
-                  child: RaisedButton.icon(
-                    onPressed: () {},
-                    color: Color(0xff9E9E9E),
-                    textColor: Colors.white,
-                    icon: Icon(
-                      MdiIcons.heartPulse,
-                      size: 30,
-                      color: Colors.white,
-                    ),
-                    label: Text(
-                      'الملف الصحي',
-                      style: TextStyle(
-                          fontSize: 22,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: 'Lemonada'),
-                    ),
-                  ),
+                  child: new Directionality(
+                      textDirection: TextDirection.rtl,
+                      child: RaisedButton.icon(
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/studentHealthProfile');
+                        },
+                        color: Color(0xff9E9E9E),
+                        textColor: Colors.white,
+                        icon: Icon(
+                          MdiIcons.heartPulse,
+                          size: 30,
+                          color: Colors.white,
+                        ),
+                        label: Text(
+                          'الملف الصحي',
+                          style: TextStyle(
+                              fontSize: 22,
+                              fontWeight: FontWeight.bold,
+                              fontFamily: 'Lemonada'),
+                        ),
+                      )),
                 )),
               ],
             ),
