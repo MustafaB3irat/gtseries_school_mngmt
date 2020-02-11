@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
-import './dashboard.dart';
-import './StudentIdCard.dart';
-import './StudentProfile.dart';
-import './StudentAbsent.dart';
-import './StudentLateProfile.dart';
-import './BehaviourProfile.dart';
-import './HealthProfile.dart';
+import 'package:school_mngmt/pages/dashboard.dart';
+import 'package:school_mngmt/pages/StudentIdCard.dart';
+import 'package:school_mngmt/pages/StudentProfile.dart';
+import 'package:school_mngmt/pages/StudentAbsent.dart';
+import 'package:school_mngmt/pages/StudentLateProfile.dart';
+import 'package:school_mngmt/pages/BehaviourProfile.dart';
+import 'package:school_mngmt/pages/HealthProfile.dart';
+import 'package:school_mngmt/pages/SplashScreen.dart';
+import 'DashboardScaffold.dart';
+import 'package:school_mngmt/pages/Login/LoginPickType.dart';
 
 void main() => runApp(MyApp());
 
@@ -27,23 +30,7 @@ class MyAppState extends State<MyApp> {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Scaffold(
-        resizeToAvoidBottomPadding: false,
-        appBar: AppBar(
-          elevation: 0.0,
-          backgroundColor: Colors.grey[850],
-          title: Text(
-            'GT Series',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 22,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          centerTitle: true,
-        ),
-        body: dashboard(),
-      ),
+      home:LoginPickType(),
       routes: {
         '/studentProfile': (context) => StudentProfile(),
         '/studentIdCard': (context) => StudentIdCard(),

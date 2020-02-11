@@ -1,34 +1,18 @@
 import 'package:flutter/material.dart';
 
-import 'models/Health.dart';
-import 'HealthProfileCard.dart';
+import '../models/AbsentAndLate.dart';
+import 'package:school_mngmt/pages/StudentAbsentAndLateCard.dart';
 
-class HealthProfile extends StatelessWidget {
-  final List<Health> data = [
-    Health(
-      date: '20/9/2019',
-      number: '14',
-      details: 'لا شيء',
-      notes: 'لا شيء',
-    ),
-    Health(
-      date: '20/9/2019',
-      number: '14',
-      details: 'لا شيء',
-      notes: 'لا شيء',
-    ),
-    Health(
-      date: '20/9/2019',
-      number: '14',
-      details: 'لا شيء',
-      notes: 'لا شيء',
-    ),
-    Health(
-      date: '20/9/2019',
-      number: '14',
-      details: 'لا شيء',
-      notes: 'لا شيء',
-    ),
+class StudentAbsent extends StatelessWidget {
+  final List<AbsentAndLate> data = [
+    AbsentAndLate(
+        date: '20/9/2019', excuse: 'مرض', details: 'لا شيء', notes: 'لا شيء'),
+    AbsentAndLate(
+        date: '20/9/2019', excuse: 'زيارة', details: 'لا شيء', notes: 'لا شيء'),
+    AbsentAndLate(
+        date: '20/9/2019', excuse: 'عرس', details: 'لا شيء', notes: 'لا شيء'),
+    AbsentAndLate(
+        date: '20/9/2019', excuse: '....', details: 'لا شيء', notes: 'لا شيء'),
   ];
 
   @override
@@ -38,7 +22,7 @@ class HealthProfile extends StatelessWidget {
         backgroundColor: Colors.grey[850],
         centerTitle: true,
         title: Text(
-          'الملف الصحي',
+          'الغيابات',
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 22.0,
@@ -58,7 +42,7 @@ class HealthProfile extends StatelessWidget {
             padding: EdgeInsets.all(10),
             child: Column(
               children:
-                  data.map((health) => HealthProfileCard(health)).toList(),
+                  data.map((absent) => StudentAbsentAndLateCard(absent)).toList(),
             ),
           ),
         ),

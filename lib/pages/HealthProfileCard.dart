@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'models/Health.dart';
+import '../models/Health.dart';
 
 class HealthProfileCard extends StatelessWidget {
   final Health health;

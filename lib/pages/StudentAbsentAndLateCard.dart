@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'models/AbsentAndLate.dart';
+import '../models/AbsentAndLate.dart';
 
 class StudentAbsentAndLateCard extends StatelessWidget {
   final AbsentAndLate absent;
