@@ -103,7 +103,7 @@ class _State extends State<LoginPickSchool> {
                 }).toList(),
                 onChanged: (String value) {
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return DashboardScaffold();
+                    return FinalStageLogin();
                   }));
                 },
                 iconSize: 40,

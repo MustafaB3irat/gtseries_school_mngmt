@@ -32,7 +32,7 @@ class _LoginState extends State<LoginPickType> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 Text(
-                  'أيّهم أنت ؟',
+                  'مرحباً، أيّهم أنت ؟',
                   style: TextStyle(
                       fontSize: 25.0,
                       fontWeight: FontWeight.bold,
