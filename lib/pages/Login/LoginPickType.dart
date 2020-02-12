@@ -12,8 +12,9 @@ class _LoginState extends State<LoginPickType> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0.0,
-        backgroundColor: Color(0xffFAB045), // status bar color
-        brightness: Brightness.dark, // status bar brightness
+        backgroundColor: Colors.orange[900],
+        // status bar color
+        brightness: Brightness.dark,
       ),
       body: SafeArea(
         child: Container(
@@ -21,7 +22,11 @@ class _LoginState extends State<LoginPickType> {
           height: double.infinity,
           decoration: BoxDecoration(
             gradient: LinearGradient(
-              colors: [Color(0xffFAB045), Color(0xffE67316)],
+              colors: [
+                Colors.orange[900],
+                Colors.orange[800],
+                Colors.orange[400]
+              ],
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
             ),
