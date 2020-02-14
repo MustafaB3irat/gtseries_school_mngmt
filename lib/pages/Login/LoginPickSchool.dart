@@ -40,7 +40,7 @@ class _State extends State<LoginPickSchool> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0.0,
-        backgroundColor: Colors.orange[900],
+        backgroundColor: Colors.deepPurple[900],
         // status bar color
         brightness: Brightness.dark,
       ),
@@ -50,9 +50,9 @@ class _State extends State<LoginPickSchool> {
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              Colors.orange[900],
-              Colors.orange[800],
-              Colors.orange[400]
+              Colors.deepPurple[900],
+              Colors.deepPurple[800],
+              Colors.deepPurple[400]
             ],
             begin: Alignment.topCenter,
           ),
@@ -73,7 +73,7 @@ class _State extends State<LoginPickSchool> {
                 ),
               ),
               SizedBox(
-                height: 40,
+                height: 60,
               ),
               Expanded(
                 child: Container(
@@ -86,45 +86,75 @@ class _State extends State<LoginPickSchool> {
                       ),
                       Padding(
                         padding: const EdgeInsets.all(16.0),
-                        child: DropdownButton<String>(
-                          isExpanded: true,
-                          icon: Icon(
-                            Icons.arrow_drop_down,
-                            color: Colors.black,
-                          ),
-                          items: _schools.map((String school) {
-                            return DropdownMenuItem(
-                              value: school,
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                children: <Widget>[
-                                  Text(
-                                    school,
-                                    style: TextStyle(
-                                        fontFamily: 'Lemonada',
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 10),
-                                  ),
-                                  SizedBox(
-                                    width: 5,
-                                  ),
-                                  Icon(Icons.school),
-                                ],
+                        child: DropdownButtonHideUnderline(
+                          child: Container(
+                            decoration: ShapeDecoration(
+                              color: Colors.white,
+                              shape: RoundedRectangleBorder(
+                                side: BorderSide(
+                                    width: 1.0, style: BorderStyle.solid),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(30.0)),
                               ),
-                            );
-                          }).toList(),
-                          onChanged: (String value) {
-                            Navigator.push(context,
-                                MaterialPageRoute(builder: (context) {
-                              return FinalStageLogin();
-                            }));
-                          },
-                          iconSize: 40,
-                          elevation: 16,
-                          style: TextStyle(color: Colors.black),
-                          underline: Container(
-                            height: 2,
-                            color: Colors.grey[900],
+                            ),
+                            child: Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 8.0),
+                              child: Theme(
+                                data: Theme.of(context).copyWith(
+                                  canvasColor: Colors.grey[900],
+                                ),
+                                child: DropdownButton<String>(
+                                  isExpanded: true,
+                                  icon: Icon(
+                                    Icons.arrow_drop_down,
+                                    color: Colors.grey[900],
+                                  ),
+                                  items: _schools.map((String school) {
+                                    return DropdownMenuItem(
+                                      value: school,
+                                      child: Container(
+                                        color: Colors.grey[900],
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.end,
+                                          children: <Widget>[
+                                            Text(
+                                              school,
+                                              style: TextStyle(
+                                                fontFamily: 'Lemonada',
+                                                fontWeight: FontWeight.bold,
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                            SizedBox(
+                                              width: 5,
+                                            ),
+                                            Icon(
+                                              Icons.school,
+                                              color: Colors.white,
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    );
+                                  }).toList(),
+                                  onChanged: (String value) {
+                                    Navigator.push(context,
+                                        MaterialPageRoute(builder: (context) {
+                                      return FinalStageLogin();
+                                    }));
+                                  },
+                                  iconSize: 40,
+                                  elevation: 16,
+                                  style: TextStyle(color: Colors.black),
+                                  underline: Container(
+                                    height: 2,
+                                    color: Colors.grey[900],
+                                  ),
+                                ),
+                              ),
+                            ),
                           ),
                         ),
                       ),

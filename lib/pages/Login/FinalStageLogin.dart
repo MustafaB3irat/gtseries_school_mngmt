@@ -15,7 +15,7 @@ class _FinalStageLoginState extends State<FinalStageLogin> {
       resizeToAvoidBottomPadding: false,
       appBar: AppBar(
         elevation: 0.0,
-        backgroundColor: Colors.orange[900],
+        backgroundColor: Colors.deepPurple[900],
         // status bar color
         brightness: Brightness.dark,
       ),
@@ -24,9 +24,9 @@ class _FinalStageLoginState extends State<FinalStageLogin> {
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              Colors.orange[900],
-              Colors.orange[800],
-              Colors.orange[400]
+              Colors.deepPurple[900],
+              Colors.deepPurple[800],
+              Colors.deepPurple[400]
             ],
             begin: Alignment.topCenter,
           ),
@@ -77,8 +77,8 @@ class _FinalStageLoginState extends State<FinalStageLogin> {
                       Container(
                         decoration: BoxDecoration(boxShadow: [
                           BoxShadow(
-                              color: Color.fromRGBO(225, 95, 27, 0.3),
-                              blurRadius: 20,
+                              color: Color.fromRGBO(75, 0, 130, 0.3),
+                              blurRadius: 40,
                               offset: Offset(0, 10))
                         ]),
                         child: Image.asset(
@@ -100,8 +100,6 @@ class _FinalStageLoginState extends State<FinalStageLogin> {
                                 child: TextField(
                                   autocorrect: false,
                                   style: TextStyle(
-                                      fontSize: 20,
-                                      fontFamily: 'Lemonada',
                                       fontWeight: FontWeight.bold,
                                       color: Colors.grey[90]),
                                   decoration: InputDecoration(
@@ -134,8 +132,6 @@ class _FinalStageLoginState extends State<FinalStageLogin> {
                                 child: TextField(
                                   autocorrect: false,
                                   style: TextStyle(
-                                      fontSize: 20,
-                                      fontFamily: 'Lemonada',
                                       fontWeight: FontWeight.bold,
                                       color: Colors.grey[900]),
                                   decoration: InputDecoration(
@@ -167,14 +163,19 @@ class _FinalStageLoginState extends State<FinalStageLogin> {
                             ),
                             GestureDetector(
                               onTap: () {
-                               Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context)=>DashboardScaffold()), (Route<dynamic> route)=>false);
+                                Navigator.pushAndRemoveUntil(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            DashboardScaffold()),
+                                    (Route<dynamic> route) => false);
                               },
                               child: Container(
                                 height: 50,
                                 margin: EdgeInsets.symmetric(horizontal: 50),
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(50),
-                                  color: Colors.orange[900],
+                                  color: Colors.deepPurple[900],
                                 ),
                                 child: Center(
                                   child: Text(
