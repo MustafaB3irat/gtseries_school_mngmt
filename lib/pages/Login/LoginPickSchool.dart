@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
 import 'FinalStageLogin.dart';
-import '../DashboardScaffold.dart';
 
 class LoginPickSchool extends StatefulWidget {
   @override

@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:school_mngmt/pages/dashboard.dart';
 import 'package:school_mngmt/pages/StudentIdCard.dart';
 import 'package:school_mngmt/pages/StudentProfile.dart';
 import 'package:school_mngmt/pages/StudentAbsent.dart';
 import 'package:school_mngmt/pages/StudentLateProfile.dart';
 import 'package:school_mngmt/pages/BehaviourProfile.dart';
 import 'package:school_mngmt/pages/HealthProfile.dart';
-import 'package:school_mngmt/pages/SplashScreen.dart';
-import 'DashboardScaffold.dart';
+
+
 import 'package:school_mngmt/pages/Login/LoginPickType.dart';
 
 void main() => runApp(MyApp());

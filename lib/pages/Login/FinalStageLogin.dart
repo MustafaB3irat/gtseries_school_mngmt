@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 import '../DashboardScaffold.dart';
+import '../spinners/FadingCubeSpinner.dart';
 
 class FinalStageLogin extends StatefulWidget {
   @override
@@ -167,7 +168,7 @@ class _FinalStageLoginState extends State<FinalStageLogin> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
-                                            DashboardScaffold()),
+                                            FadingCubeSpinner(themeColor: Colors.deepPurple[900])),
                                     (Route<dynamic> route) => false);
                               },
                               child: Container(

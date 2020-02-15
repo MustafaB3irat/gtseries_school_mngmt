@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flip_card/flip_card.dart';
+import 'StudentSchedual.dart';
 
 class dashboard extends StatefulWidget {
   @override
@@ -57,7 +58,12 @@ class _DashboardState extends State<dashboard> {
 
   Widget horizontalDashItem(IconData icon, String name, int color) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        if (name == 'الرئيسية') {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => StudentSchedual()));
+        }
+      },
       child: Material(
         color: Color(color),
         elevation: 10.0,
