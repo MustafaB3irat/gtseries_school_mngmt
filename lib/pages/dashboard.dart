@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flip_card/flip_card.dart';
 import 'StudentSchedual.dart';
+import 'studentMarks/StudentMarks.dart';
+import 'StudentDiscussionsWidget.dart';
 
 class dashboard extends StatefulWidget {
   @override
@@ -17,6 +19,9 @@ class _DashboardState extends State<dashboard> {
       onTap: () {
         if (name == 'ملف الطالب') {
           Navigator.pushNamed(context, '/studentProfile');
+        } else if (name == 'العلامات') {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => StudentMarks()));
         }
       },
       child: Material(
@@ -62,6 +67,11 @@ class _DashboardState extends State<dashboard> {
         if (name == 'الرئيسية') {
           Navigator.push(context,
               MaterialPageRoute(builder: (context) => StudentSchedual()));
+        } else if (name == 'حلقات النقاش') {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => StudentDiscussionsWodget()));
         }
       },
       child: Material(
