@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:school_mngmt/pages/StudentIdCard.dart';
-import 'package:school_mngmt/pages/StudentProfile.dart';
-import 'package:school_mngmt/pages/StudentAbsent.dart';
-import 'package:school_mngmt/pages/StudentLateProfile.dart';
-import 'package:school_mngmt/pages/BehaviourProfile.dart';
-import 'package:school_mngmt/pages/HealthProfile.dart';
+import 'package:school_mngmt/studentProfile/StudentIdCard.dart';
+import 'package:school_mngmt/studentProfile/StudentProfile.dart';
+import 'package:school_mngmt/studentProfile/StudentAbsent.dart';
+import 'package:school_mngmt/studentProfile/StudentLateProfile.dart';
+import 'package:school_mngmt/studentProfile/BehaviourProfile.dart';
+import 'package:school_mngmt/studentProfile/HealthProfile.dart';
 
 
 import 'package:school_mngmt/pages/Login/LoginPickType.dart';
@@ -26,6 +26,7 @@ class MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'School Mngmt',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),

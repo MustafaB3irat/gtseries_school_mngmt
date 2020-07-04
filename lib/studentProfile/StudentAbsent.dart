@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../models/AbsentAndLate.dart';
-import 'package:school_mngmt/pages/StudentAbsentAndLateCard.dart';
+import 'package:school_mngmt/studentProfile/StudentAbsentAndLateCard.dart';
 
 class StudentAbsent extends StatelessWidget {
   final List<AbsentAndLate> data = [

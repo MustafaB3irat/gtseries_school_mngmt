@@ -22,39 +22,41 @@ class _DashboardState extends State<dashboard> {
         } else if (name == 'العلامات') {
           Navigator.push(
               context, MaterialPageRoute(builder: (context) => StudentMarks()));
+        } else if (name == 'حلقات النقاش') {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => StudentDiscussionsWodget()));
         }
       },
       child: Material(
         color: Color(color),
         elevation: 10.0,
         child: Center(
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Icon(
-                      icon,
-                      size: 40,
-                      color: Colors.white,
-                    ),
-                    Padding(
-                      padding: EdgeInsets.all(5.0),
-                      child: Text(
-                        name,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 22,
-                        ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Icon(
+                    icon,
+                    size: 40,
+                    color: Colors.white,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Text(
+                      name,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
                       ),
                     ),
-                  ],
-                )
-              ],
-            ),
+                  ),
+                ],
+              )
+            ],
           ),
         ),
       ),
@@ -67,11 +69,6 @@ class _DashboardState extends State<dashboard> {
         if (name == 'الرئيسية') {
           Navigator.push(context,
               MaterialPageRoute(builder: (context) => StudentSchedual()));
-        } else if (name == 'حلقات النقاش') {
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (context) => StudentDiscussionsWodget()));
         }
       },
       child: Material(
@@ -114,34 +111,34 @@ class _DashboardState extends State<dashboard> {
     // TODO: implement build
     return StaggeredGridView.count(
       physics: ScrollPhysics(),
-      crossAxisCount: 2,
+      crossAxisCount: 3,
       crossAxisSpacing: 12.0,
       mainAxisSpacing: 12.0,
       padding: EdgeInsets.symmetric(horizontal: 12.0, vertical: 12.0),
       children: <Widget>[
         horizontalDashItem(Icons.dashboard, "الرئيسية", 0xff8782FF),
-        verticalDashItem(Icons.school, "العلامات", 0xffFDC106),
         verticalDashItem(
             Icons.supervised_user_circle, "ملف الطالب", 0xffF06A3F),
-        horizontalDashItem(Icons.question_answer, "حلقات النقاش", 0xffF9AA40),
+        verticalDashItem(Icons.question_answer, "حلقات النقاش", 0xffF9AA40),
         verticalDashItem(Icons.map, "الخطة الإرشادية", 0xff607D8B),
+        verticalDashItem(Icons.school, "العلامات", 0xffFDC106),
         verticalDashItem(Icons.work, "الوظائف", 0xff8BC34A),
-        horizontalDashItem(Icons.library_books, "المواد التعليمية", 0xff9E9E9E),
+        verticalDashItem(Icons.library_books, "المواد التعليمية", 0xff9E9E9E),
         verticalDashItem(Icons.date_range, "مواعيد زيارة الأهل", 0xffEC5862),
         verticalDashItem(Icons.attach_money, "الأقساط", 0xffEE5135),
         horizontalDashItem(Icons.message, "الرسائل", 0xff72b2a7),
       ],
       staggeredTiles: [
-        StaggeredTile.extent(2, 90),
-        StaggeredTile.extent(1, 120),
-        StaggeredTile.extent(1, 120),
-        StaggeredTile.extent(2, 90),
-        StaggeredTile.extent(1, 120),
-        StaggeredTile.extent(1, 120),
-        StaggeredTile.extent(2, 90),
-        StaggeredTile.extent(1, 120),
-        StaggeredTile.extent(1, 120),
-        StaggeredTile.extent(2, 90)
+        StaggeredTile.extent(3, 80),
+        StaggeredTile.extent(1, 100),
+        StaggeredTile.extent(2, 100),
+        StaggeredTile.extent(2, 100),
+        StaggeredTile.extent(1, 100),
+        StaggeredTile.extent(1, 100),
+        StaggeredTile.extent(2, 100),
+        StaggeredTile.extent(2, 100),
+        StaggeredTile.extent(1, 100),
+        StaggeredTile.extent(3, 80)
       ],
     );
   }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../models/Behaviour.dart';
-import 'package:school_mngmt/pages/BehaviourProfileCard.dart';
+import 'package:school_mngmt/studentProfile/BehaviourProfileCard.dart';
 
 class BehaviourProfile extends StatelessWidget {
   final List<Behaviour> data = [
